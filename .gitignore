@@ -1,0 +1,12 @@
+.python312/
+.venv/
+.venv312/
+__pycache__/
+.ipynb_checkpoints/
+.dataset_load.py
+.notebook_ui.ps1
+previous_editor_cells.json
+previous_installation_log.json
+kernel-screen.png
+cnn_results/tmp*/
+.github_upload*

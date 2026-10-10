@@ -1,0 +1,45 @@
+{
+  "seed": 42,
+  "threshold": 0.5,
+  "selection_rule": "Validation balanced accuracy, then validation ROC-AUC",
+  "selected_model": "baseline",
+  "training_class_weights": {
+    "0": 1.9390444810543657,
+    "1": 0.6737263880938752
+  },
+  "validation": {
+    "baseline": {
+      "balanced_accuracy": 0.9613729410644578,
+      "roc_auc": 0.9942492621155861,
+      "sensitivity": 0.9820051413881749,
+      "specificity": 0.9407407407407408,
+      "epochs_run": 27,
+      "best_epoch": 22
+    },
+    "weighted": {
+      "balanced_accuracy": 0.950109492525945,
+      "roc_auc": 0.9923260020946396,
+      "sensitivity": 0.974293059125964,
+      "specificity": 0.9259259259259259,
+      "epochs_run": 14,
+      "best_epoch": 9
+    }
+  },
+  "test": {
+    "accuracy": 0.8493589743589743,
+    "balanced_accuracy": 0.8042735042735043,
+    "sensitivity": 0.9846153846153847,
+    "specificity": 0.6239316239316239,
+    "roc_auc": 0.9432226605303529,
+    "confusion_matrix": [
+      [
+        146,
+        88
+      ],
+      [
+        6,
+        384
+      ]
+    ]
+  }
+}
