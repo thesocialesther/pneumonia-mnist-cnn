@@ -154,21 +154,3 @@ predictions = (scores >= 0.5).astype("int32")  # 0 = Normal, 1 = Pneumonia
 | `cnn_results/misclassified_images.png` | Up to eight misclassified test images with labels and predictions. |
 | `cnn_results/saved_model_test_examples.png` | Sixteen test examples from the reloaded model; green titles indicate correct predictions, red titles indicate mistakes. |
 
-### Local-only files excluded from GitHub
-
-`.python312/`, `.venv/`, and `.venv312/` contain local Python installations or environments. `.dataset_load.py` and `.notebook_ui.ps1` were temporary notebook/desktop automation helpers. `previous_editor_cells.json` and `previous_installation_log.json` retain development troubleshooting history. Temporary model-save directories such as `cnn_results/tmp*/`, notebook checkpoints, and Python caches are also excluded. These are not needed to reproduce the project.
-
-## Next steps
-
-- [x] Validate the dataset and image/label pairing.
-- [x] Visualize both classes and inspect class imbalance.
-- [x] Train and compare baseline and weighted CNNs.
-- [x] Save and reload the selected model.
-- [x] Report sensitivity, specificity, ROC-AUC, and the confusion matrix.
-- [ ] Examine score distributions and probability calibration using validation data.
-- [ ] Investigate the sensitivity/specificity tradeoff by selecting thresholds on validation data.
-- [ ] Run repeated-seed experiments to assess training variability.
-- [ ] Compare modest architecture or augmentation changes using validation data.
-- [ ] Obtain a new independent evaluation dataset before making stronger generalization claims.
-
-The test results and mistakes have now been examined. Do not use them to select new settings and then present the same test set as an untouched final evaluation. The small resized pediatric benchmark images do not establish performance on adult X-rays, other hospitals, or clinical workflows.
